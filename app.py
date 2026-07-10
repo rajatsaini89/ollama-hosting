@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 app = FastAPI(title="Ollama API")
 
-OLLAM_BASE_URL = os.getenv("OLLAM_BASE_URL", "http://localhost:11434")  # Default to localhost if not set
+OLLAM_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")  # Default to localhost if not set
 DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "llama3.2")  # Default model if not set
 
 class PromptRequest(BaseModel):
